@@ -10,6 +10,7 @@ data<-merge(read.csv("train.csv"),read.csv("store.csv"),
 test<-merge(read.csv("test.csv"),read.csv("store.csv"),by="Store")
 
 
+
 feat_eng=function(data){
         data$Date<-as.POSIXlt(data$Date,format="%Y-%m-%d")
         data$Month<-as.factor(months(data$Date))#Creates a "month" var
